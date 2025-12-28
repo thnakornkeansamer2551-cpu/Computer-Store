@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBORG X | Futuristic Luxury</title> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #000000; --dark: #1a1a1a; --white: #ffffff; --gray: #f4f4f4; }
+        
+        body, html { margin: 0; font-family: 'Prompt', sans-serif; background-color: var(--white); scroll-behavior: smooth; }
+        
+        /* --- Hero Section --- */
+        .hero-section {
+            min-height: 90vh; /* ใช้ min-height แทน height เพื่อรองรับข้อความที่ยาวขึ้น */
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            color: var(--dark); 
+            text-align: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        .logo-container { width: 180px; height: 180px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; }
+        .logo-container img { width: 100%; height: 100%; object-fit: contain; }
+
+        h1 { font-family: 'Playfair Display', serif; font-size: 4rem; letter-spacing: 8px; margin: 0; color: var(--dark); }
+        
+        /* ปรับสไตล์ข้อความบริการให้ดูอ่านง่าย */
+        p.welcome-text { 
+            font-size: 1.1rem; 
+            letter-spacing: 1px; 
+            margin: 20px 0 40px 0; 
+            opacity: 0.8; 
+            color: #333; 
+            line-height: 1.8; /* เพิ่มระยะห่างระหว่างบรรทัด */
+            max-width: 800px;
+        }
+
+        .enter-shop {
+            padding: 18px 50px; 
+            border: 1px solid var(--dark); 
+            color: var(--dark);
+            text-decoration: none; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            transition: 0.5s;
+        }
+        .enter-shop:hover { background: var(--dark); color: var(--white); }
+
+        /* --- Section: Details & Auto-Slider --- */
+        .details-section {
+            padding: 80px 0;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .details-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+        }
+
+        .details-section p {
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+            color: #777;
+            line-height: 1.6;
+        }
+
+        /* --- Auto Scrolling Slider --- */
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            background: var(--white);
+            padding: 20px 0;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .slider-track {
+            display: inline-flex;
+            animation: scrollLeft 25s linear infinite; /* ปรับความเร็วให้ช้าลงเล็กน้อยเพื่อให้ดูหรู */
+        }
+
+        .slide {
+            width: 300px;
+            height: 400px;
+            margin: 0 15px;
+            background: var(--gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+        
+        .slide:hover img { transform: scale(1.1); }
+
+        @keyframes scrollLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* สำหรับมือถือ */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; letter-spacing: 4px; }
+            p.welcome-text { font-size: 0.9rem; }
+            .slide { width: 200px; height: 280px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero-section">
+    <div class="logo-container">
+        <img src="THAI.png" alt="CYBORG X Logo">
+    </div>
+    <h1>CYBORG X</h1> 
+    <p class="welcome-text">
+        รับซ่อมอุปกรณ์คอมพิวเตอร์ ลงโปรแกรมคอมพิวเตอร์ แก้ไขปัญหาโปรแกรมใช้งานไม่ได้ <br>
+        จำหน่าย แฟรชไดรฟ์ บอร์ด Arduino สายอัพโค้ด <br> <br>
+        #CYBORG X THAILAND
+    </p> 
+    <a href="Shop.html" class="enter-shop">เข้าสู่หน้ารายการ</a>
+</div>
+
+<section class="details-section">
+    <h2>ผลงานรับซ่อมคอมพิวเตอร์</h2>
+    <p>ผลงานการรับซ่อมคอมพิวเตอร์และลงโปรแกรมคอมพิวเตอร์</p>
+
+    <div class="slider-container">
+        <div class="slider-track">
+            <div class="slide"><img src="im1.jpg" alt="Collection 1"></div>
+            <div class="slide"><img src="im2.jpg" alt="Collection 2"></div>
+            <div class="slide"><img src="im3.jpg" alt="Collection 3"></div>
+            <div class="slide"><img src="im4.jpg" alt="Collection 4"></div>
+            <div class="slide"><img src="im5.jpg" alt="Collection 5"></div>
+            <div class="slide"><img src="im6.jpg" alt="Collection 6"></div>
+            <div class="slide"><img src="im7.jpg" alt="Collection 7"></div>
+            <div class="slide"><img src="im8.jpg" alt="Collection 8"></div>
+            <div class="slide"><img src="im9.jpg" alt="Collection 9"></div>
+            <div class="slide"><img src="im10.jpg" alt="Collection 10"></div>
+            <div class="slide"><img src="im11.jpg" alt="Collection 11"></div>
+            <div class="slide"><img src="im12.jpg" alt="Collection 12"></div>
+            <div class="slide"><img src="im1.jpg" alt="Collection 1"></div>
+            <div class="slide"><img src="im2.jpg" alt="Collection 2"></div>
+            <div class="slide"><img src="im3.jpg" alt="Collection 3"></div>
+            <div class="slide"><img src="im4.jpg" alt="Collection 4"></div>
+            <div class="slide"><img src="im5.jpg" alt="Collection 5"></div>
+            <div class="slide"><img src="im6.jpg" alt="Collection 6"></div>
+            <div class="slide"><img src="im7.jpg" alt="Collection 7"></div>
+            <div class="slide"><img src="im8.jpg" alt="Collection 8"></div>
+            <div class="slide"><img src="im9.jpg" alt="Collection 9"></div>
+            <div class="slide"><img src="im10.jpg" alt="Collection 10"></div>
+            <div class="slide"><img src="im11.jpg" alt="Collection 11"></div>
+            <div class="slide"><img src="im12.jpg" alt="Collection 12"></div>
+        </div>
+    </div>
+</section>
+
+<section class="details-section">
+    <h2>THANK TOU</h2>
+    <p>ขอบคุณที่ใช้บริการนะครับ</p>
+
+</body>
+</html>

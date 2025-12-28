@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location | CYBORG X</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --dark: #1a1a1a; --white: #ffffff; }
+        body { font-family: 'Prompt', sans-serif; margin: 0; background: var(--white); color: var(--dark); }
+
+        /* Navigation */
+        nav { padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; background: white; z-index: 100; }
+        .brand { font-family: 'Playfair Display', serif; font-size: 1.5rem; text-decoration: none; color: black; letter-spacing: 2px; }
+        .nav-links a { text-decoration: none; color: #666; margin-left: 20px; font-size: 0.9rem; }
+
+        .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 10px; }
+
+        /* Location Layout */
+        .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        
+        /* Map Box - อัปเดตพิกัดใหม่ */
+        .map-box { width: 100%; height: 450px; border: 1px solid #eee; }
+        .map-box iframe { width: 100%; height: 100%; border: none; }
+
+        .info-box { padding: 20px 0; }
+        .info-item { display: flex; align-items: flex-start; margin-bottom: 30px; }
+        .info-icon { font-size: 1.5rem; color: var(--dark); margin-right: 20px; }
+        .info-text h3 { margin: 0 0 5px 0; font-size: 1.1rem; }
+        .info-text p { margin: 0; color: #666; line-height: 1.6; }
+
+        .btn-direction { 
+            display: inline-block; margin-top: 20px; padding: 15px 35px; 
+            background: var(--dark); color: white; text-decoration: none; 
+            font-size: 0.9rem; letter-spacing: 1px; transition: 0.3s;
+        }
+        .btn-direction:hover { opacity: 0.8; }
+
+        @media (max-width: 768px) { .location-grid { grid-template-columns: 1fr; } }
+        footer { text-align: center; padding: 40px; border-top: 1px solid #eee; color: #aaa; font-size: 0.8rem; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="brand">CYBORG X</a>
+    <div class="nav-links">
+        <a href="index.html">หน้าแรก</a>
+        <a href="shop.html">รายการบริการ</a>
+        <a href="location.html" style="font-weight: bold; color: black;">ที่ตั้งร้าน</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="section-header">
+        <h2>OUR LOCATION</h2>
+        <p>ศูนย์บริการและจำหน่ายอุปกรณ์ CYBORG X</p>
+    </div>
+
+    <div class="location-grid">
+        <div class="map-box">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3871.3256157018315!2d100.5617030750945!3d14.026833286393564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTTCsDAxJzM2LjYiTiAxMDDCsDMzJzUxLjQiRQ!5e0!3m2!1sth!2sth!4v1703692800000!5m2!1sth!2sth" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="info-box">
+            <div class="info-item">
+                <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="info-text">
+                    <h3>Address</h3>
+                    <p>ร้านซ่อม/ลงโปรแกรมคอมพิวเตอร์ ร้านขายน้ำแพ็ค <br>ตำบลสวนพริกไทย อำเภอเมืองปทุมธานี<br>ปทุมธานี 12000</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon"><i class="fas fa-clock"></i></div>
+                <div class="info-text">
+                    <h3>Service Hours</h3>
+                    <p>ร้านเปิดทุกวัน: 09:00 - 18:00 น.<br>ยกเว้นติดธุระ</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                <div class="info-text">
+                    <h3>Contact</h3>
+                    <p>โทร: 095-016-4260<br>LINE ID: 0620750692</p>
+                </div>
+            </div>
+
+            <a href="https://www.google.com/maps/dir/?api=1&destination=14.026833,100.564278" target="_blank" class="btn-direction">
+                <i class="fas fa-location-arrow"></i> นำทางด้วย Google Maps
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    © 2025 CYBORG X - COMPUTER SOLUTIONS & COMPONENTS
+</footer>
+
+</body>
+</html>
